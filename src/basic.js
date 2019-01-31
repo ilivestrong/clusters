@@ -2,7 +2,7 @@
  * Cluster module helps create and leverage available CPU cores on a server.
  * It let's child processes in the cluster share a socket connection and port.
  * It manages/orchestrates the work scheduling, the incoming connections, between the available workers/child processes in the cluster.
- * The workers inside the cluster all do same work(same code), but work is distributed between each work, proficiently by the cluster(process master).
+ * The workers inside the cluster, by default, all do same work(process same code/file, but this behavior can be changed for each fork). 
  */
 
 
