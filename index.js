@@ -1,2 +1,2 @@
-const app = require('./src/basic')
+const app = require('./src/woker_eventsobjects')
 app()
