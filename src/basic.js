@@ -1,8 +1,10 @@
 /**
  * Cluster module helps create and leverage available CPU cores on a server.
- * It let's child processes in the cluster share a socket connection and port.
- * It manages/orchestrates the work scheduling, the incoming connections, between the available workers/child processes in the cluster.
- * The workers inside the cluster, by default, all do same work(process same code/file, but this behavior can be changed for each fork). 
+ * It let's child processes(workers) in the cluster share a socket connection and port.
+ * The master process listens for network connections and distribute them across the available workers/child processes in the cluster, using either:
+ *  1. "Round-Robin approach" - with built in smarts to avoid overloading a worker process.
+ *  2. "Opt-in approach" - where master creates the listening socket and hands it off to the interested workers.
+ *    This approach may seem better between the two, but in practice mostly only few out of available worker process get most of the load.
  */
 
 
