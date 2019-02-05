@@ -23,7 +23,11 @@ const init = () => {
             console.log(`Worker: ${worker.process.pid} died.`)
         })
 
-        //console.log(cluster.workers)
+        
+        //cluster.workers is a JS object indexed by a string key e.g., 1, 2, 3 etc
+        // for(let w in cluster.workers) {
+        //     console.log(cluster.workers[w].process.pid)
+        // }
     } else {
         http.createServer((req, res) => {
             res.writeHead(200)
