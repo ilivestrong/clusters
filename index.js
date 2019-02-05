@@ -1,2 +1,2 @@
-const app = require('./src/woker_eventsobjects')
+const app = require('./src/woker_disconnect_method')
 app()
