@@ -1,2 +1,2 @@
-const app = require('./src/woker_disconnect_method')
+const app = require('./src/cluster_setup')
 app()
